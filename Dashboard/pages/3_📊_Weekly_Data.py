@@ -5,14 +5,9 @@ import altair as alt
 
 st.set_page_config(page_title='Weekly Data', page_icon='📉')
 
-st.markdown("# Weekly Data")
+st.markdown("#### Weekly Data")
 st.sidebar.success('Weekly Data')
 
-st.write(
-        """
-        Weekly
-"""
-)
 
 @st.cache_data
 def load_dataset():

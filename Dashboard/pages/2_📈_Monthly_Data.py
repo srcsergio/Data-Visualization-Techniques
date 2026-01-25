@@ -5,13 +5,8 @@ import pandas as pd
 
 st.set_page_config(page_title='Monthly Data', page_icon="📈")
 
-st.markdown("# Monthly Data")
+st.markdown("#### Monthly Data")
 st.sidebar.success('Monthly Data')
-st.write(
-        """
-        Monthly
-"""
-)
 
 @st.cache_data
 def load_dataset():

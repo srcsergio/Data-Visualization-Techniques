@@ -4,9 +4,9 @@ import pandas as pd
 
 st.set_page_config(page_title='Daily Data')
 
-st.markdown("### Daily Data")
+st.markdown("#### Daily Data")
 st.sidebar.success('Daily Data')
-
+st.markdown('peak hours')
 def load_dataset():
     df = pd.read_csv('df_fremont.csv')
     df['Date'] = pd.to_datetime(df['Date'])

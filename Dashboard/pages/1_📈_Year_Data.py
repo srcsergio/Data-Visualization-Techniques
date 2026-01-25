@@ -8,11 +8,6 @@ st.set_page_config(page_title="Summary Data", page_icon="📋")
 st.markdown('##### Average and total annual number of bicycles traveling on the bridge.')
 st.sidebar.success("Year Data")
 
-st.write(
-        """
-        Summary
-"""
-    )
 
 def get_weekend(day):
     weekend=0
