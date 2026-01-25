@@ -53,12 +53,23 @@ def load_dataset():
     return df_daily
 
 df = load_dataset()
-
+#daily_mean = df.groupby('year')['Total'].mean()
+#weekday_mean = df[df['day_of_week'] < 5].groupby('year')['Total'].mean()
+#weekend_mean = df[df['weekend'] == 1].groupby('year')['Total'].mean()
 year_total = df.groupby('year')['Total'].sum()
 year_mean = year_total/7
+#month_mean = year_total/12
 
 left, right = st.columns(2, border=True)
 
+#left.markdown("Daily average per year",text_alignment="center")
+#left.bar_chart(daily_mean, x_label='year', y_label='average bicycle', color= "#ffaa0088", stack=False)
+
+#right.markdown("Weekly from Monday to Friday",text_alignment="center")
+#right.bar_chart(weekday_mean, x_label='year', y_label='average bicycle', color= "#ffaa0088", stack=False)
+
+#left.markdown("Weekend",text_alignment="center")
+#left.bar_chart(weekend_mean, x_label='year', y_label='average bicycle', color= "#ffaa0088", stack=False)
 
 left.markdown("Total by Year",text_alignment="center")
 left.bar_chart(year_total, x_label='year', y_label='Total bicycle', color= "#ffaa0088", stack=False)
